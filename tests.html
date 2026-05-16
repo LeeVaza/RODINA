@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проверка знаний - Крым и Новороссия</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Times+New+Roman&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'TD Sofiya';
+      src: url('TDSofiya.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="tests-page">
+    <h1 class="tests-header">ПРОВЕРКА ЗНАНИЙ</h1>
+    <a href="index.html" class="back-button">На главную</a>
+    
+    <div class="tests-container">
+      <!-- Блок: Республика Крым -->
+      <div class="test-block" data-region="crimea" data-completed="0">
+        <div class="test-block-content">
+          <img src="images/c_crimea.png" alt="Республика Крым" class="test-region-image">
+          <div class="test-info">
+            <h3 class="test-region-name">Республика Крым</h3>
+            <div class="test-progress">Вопросов: <span class="questions-count">10</span></div>
+          </div>
+        </div>
+        <div class="test-stats">
+          <span class="test-stats-text">Правильных ответов: <span class="correct-count">0</span>/10</span>
+          <button class="start-test-btn" onclick="startTest('crimea')" title="Начать тест">▶</button>
+        </div>
+        <div class="test-questions-wrapper hidden">
+          <div class="test-timer">10:00</div>
+          <div class="questions-container"></div>
+          <button class="finish-test-btn" onclick="finishTest('crimea')">Завершить тест</button>
+        </div>
+      </div>
+
+      <!-- Блок: Херсонская область -->
+      <div class="test-block" data-region="kherson" data-completed="0">
+        <div class="test-block-content">
+          <img src="images/c_kherson.png" alt="Херсонская область" class="test-region-image">
+          <div class="test-info">
+            <h3 class="test-region-name">Херсонская область</h3>
+            <div class="test-progress">Вопросов: <span class="questions-count">10</span></div>
+          </div>
+        </div>
+        <div class="test-stats">
+          <span class="test-stats-text">Правильных ответов: <span class="correct-count">0</span>/10</span>
+          <button class="start-test-btn" onclick="startTest('kherson')" title="Начать тест">▶</button>
+        </div>
+        <div class="test-questions-wrapper hidden">
+          <div class="test-timer">10:00</div>
+          <div class="questions-container"></div>
+          <button class="finish-test-btn" onclick="finishTest('kherson')">Завершить тест</button>
+        </div>
+      </div>
+
+      <!-- Блок: Запорожская область -->
+      <div class="test-block" data-region="zaporozhye" data-completed="0">
+        <div class="test-block-content">
+          <img src="images/c_zaporizhzhia.png" alt="Запорожская область" class="test-region-image">
+          <div class="test-info">
+            <h3 class="test-region-name">Запорожская область</h3>
+            <div class="test-progress">Вопросов: <span class="questions-count">10</span></div>
+          </div>
+        </div>
+        <div class="test-stats">
+          <span class="test-stats-text">Правильных ответов: <span class="correct-count">0</span>/10</span>
+          <button class="start-test-btn" onclick="startTest('zaporozhye')" title="Начать тест">▶</button>
+        </div>
+        <div class="test-questions-wrapper hidden">
+          <div class="test-timer">10:00</div>
+          <div class="questions-container"></div>
+          <button class="finish-test-btn" onclick="finishTest('zaporozhye')">Завершить тест</button>
+        </div>
+      </div>
+
+      <!-- Блок: Донецкая Народная Республика -->
+      <div class="test-block" data-region="donetsk" data-completed="0">
+        <div class="test-block-content">
+          <img src="images/c_dnr.png" alt="Донецкая Народная Республика" class="test-region-image">
+          <div class="test-info">
+            <h3 class="test-region-name">Донецкая Народная Республика</h3>
+            <div class="test-progress">Вопросов: <span class="questions-count">10</span></div>
+          </div>
+        </div>
+        <div class="test-stats">
+          <span class="test-stats-text">Правильных ответов: <span class="correct-count">0</span>/10</span>
+          <button class="start-test-btn" onclick="startTest('donetsk')" title="Начать тест">▶</button>
+        </div>
+        <div class="test-questions-wrapper hidden">
+          <div class="test-timer">10:00</div>
+          <div class="questions-container"></div>
+          <button class="finish-test-btn" onclick="finishTest('donetsk')">Завершить тест</button>
+        </div>
+      </div>
+
+      <!-- Блок: Луганская Народная Республика -->
+      <div class="test-block" data-region="lugansk" data-completed="0">
+        <div class="test-block-content">
+          <img src="images/c_lnr.png" alt="Луганская Народная Республика" class="test-region-image">
+          <div class="test-info">
+            <h3 class="test-region-name">Луганская Народная Республика</h3>
+            <div class="test-progress">Вопросов: <span class="questions-count">10</span></div>
+          </div>
+        </div>
+        <div class="test-stats">
+          <span class="test-stats-text">Правильных ответов: <span class="correct-count">0</span>/10</span>
+          <button class="start-test-btn" onclick="startTest('lugansk')" title="Начать тест">▶</button>
+        </div>
+        <div class="test-questions-wrapper hidden">
+          <div class="test-timer">10:00</div>
+          <div class="questions-container"></div>
+          <button class="finish-test-btn" onclick="finishTest('lugansk')">Завершить тест</button>
+        </div>
+      </div>
+
+      <!-- Финальный общий тест -->
+      <div class="test-block final-test" data-region="final" data-completed="0" data-locked="false">
+        <div class="test-block-content">
+          <img src="images/Flag_of_Novorussia.svg" alt="Все регионы" class="test-region-image">
+          <div class="test-info">
+            <h3 class="test-region-name">Крым и Новороссия (общий тест)</h3>
+            <div class="test-progress">Вопросов: <span class="questions-count">30</span></div>
+          </div>
+        </div>
+        <div class="test-stats">
+          <span class="test-stats-text">Правильных ответов: <span class="correct-count">0</span>/30</span>
+          <button class="start-test-btn" onclick="startTest('final')" title="Начать общий тест">▶</button>
+        </div>
+        <div class="test-questions-wrapper hidden">
+          <div class="test-timer">30:00</div>
+          <div class="questions-container"></div>
+          <button class="finish-test-btn" onclick="finishTest('final')">Завершить тест</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно подтверждения начала теста -->
+  <div id="confirm-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Начать тестирование?</h2>
+      <p>У вас есть <span id="timer-limit">10</span> минут на прохождение теста.</p>
+      <div class="modal-buttons">
+        <button class="modal-btn confirm" onclick="confirmStartTest()">Да, начать</button>
+        <button class="modal-btn cancel" onclick="cancelStartTest()">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- [НОВОЕ] Модальное окно подтверждения завершения теста -->
+  <div id="finish-confirm-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Завершить тестирование?</h2>
+      <p>Ваши ответы будут проверены, и результаты сохранены.</p>
+      <div class="modal-buttons">
+        <button class="modal-btn confirm" onclick="confirmFinishTest()">Да, завершить</button>
+        <button class="modal-btn cancel" onclick="cancelFinishTest()">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

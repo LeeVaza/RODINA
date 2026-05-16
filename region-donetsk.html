@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Донецкая Народная Республика</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Times+New+Roman&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'TD Sofiya';
+      src: url('TDSofiya.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="region-page">
+    <h1 class="region-page-title">Донецкая Народная Республика</h1>
+    <a href="tests.html" class="tests-button">К тестам</a>
+    <a href="index.html" class="back-button">На главную</a>
+
+    <!-- Блок меток -->
+    <div class="legend-panel">
+      <h2 class="legend-title">Достопримечательности</h2>
+      <div class="filter-group">
+        <div class="filter-item cultural active" data-category="cultural">
+          <svg class="filter-icon cultural"><use xlink:href="#marker-icon"/></svg>
+          <span class="filter-label">Культурные</span>
+        </div>
+        <div class="filter-item natural active" data-category="natural">
+          <svg class="filter-icon natural"><use xlink:href="#marker-icon"/></svg>
+          <span class="filter-label">Природные</span>
+        </div>
+        <div class="filter-item historical active" data-category="historical">
+          <svg class="filter-icon historical"><use xlink:href="#marker-icon"/></svg>
+          <span class="filter-label">Исторически значимые</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Навигация по регионам -->
+    <div class="region-navigation">
+      <a href="region-luhansk.html" class="nav-arrow nav-prev" title="Луганская Народная Республика">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </a>
+      <span class="nav-text">Другие регионы</span>
+      <a href="region-zaporizhzhia.html" class="nav-arrow nav-next" title="Запорожская область">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+    </div>
+
+    <!-- Контейнер для карты и меток -->
+    <div class="map-zoom-container" id="map-container">
+      <div class="map-content-wrapper" id="map-content-wrapper">
+        <img id="region-map" class="region-map" src="images/c_dnr.png" alt="Карта Донецкой Народной Республики">
+        <!-- Метки будут добавлены сюда -->
+      </div>
+    </div>
+
+    <!-- Панель информации -->
+    <div id="info-panel" class="info-panel hidden">
+      <button id="close-info" class="close-btn">×</button>
+      <div id="info-content"></div>
+    </div>
+  </div>
+
+  <!-- SVG спрайт -->
+  <svg style="display: none;">
+    <symbol id="marker-icon" viewBox="0 0 24 24">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>

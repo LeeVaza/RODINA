@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интерактивная карта</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Times+New+Roman&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'TD Sofiya';
+      src: url('TDSofiya.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <!-- Загрузочный экран -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="slavic-pattern"></div>
+    <div class="loading-container">
+      <div class="loading-box">
+        <p id="loading-text" class="loading-text">Карта в печати...</p>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Титульный экран -->
+  <div id="title-screen" class="title-screen hidden">
+    <div class="title-background"></div>
+    <h1 class="title-text title-text-normal">
+      Интерактивная карта<br>
+      Крыма и<br>
+      Новороссии
+    </h1>
+  </div>
+
+  <!-- Основное содержимое -->
+  <main id="main-content" class="main-content hidden">
+    <header class="header">
+      <h1 class="header-title sofia-title">Крым и Новороссия</h1>
+    </header>
+
+    <div class="map-container">
+      <!-- Карта -->
+      <div class="map-wrapper">
+        <img id="map-image" src="images/map-base.png" alt="Карта регионов" class="map-image">
+        <div class="region-area" data-region="crimea" style="top: 70%; left: 13%; width: 51%; height: 27%;"></div>
+        <div class="region-area" data-region="kherson" style="top: 46%; left: 1%; width: 43%; height: 25%;"></div>
+        <div class="region-area" data-region="zaporizhzhia" style="top: 36%; left: 33%; width: 35%; height: 29%;"></div>
+        <div class="region-area" data-region="donetsk" style="top: 16%; left: 59%; width: 29%; height: 39%;"></div>
+        <div class="region-area" data-region="luhansk" style="top: 3%; left: 73%; width: 25%; height: 35%;"></div>
+      </div>
+
+      <!-- БЛОК: Регионы + Символика (один wrapper, оба — min-width: 280px, padding: 24px) -->
+      <div class="regions-wrapper">
+        <div class="regions-list">
+          <h2 class="regions-title">Регионы</h2>
+          <ul class="regions-ul">
+            <li class="region-item" data-region="crimea">
+              <span class="region-dot"></span>
+              <span>Республика Крым</span>
+            </li>
+            <li class="region-item" data-region="kherson">
+              <span class="region-dot"></span>
+              <span>Херсонская область</span>
+            </li>
+            <li class="region-item" data-region="zaporizhzhia">
+              <span class="region-dot"></span>
+              <span>Запорожская область</span>
+            </li>
+            <li class="region-item" data-region="donetsk">
+              <span class="region-dot"></span>
+              <span>Донецкая Народная Республика</span>
+            </li>
+            <li class="region-item" data-region="luhansk">
+              <span class="region-dot"></span>
+              <span>Луганская Народная Республика</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- БЛОК СИМВОЛИКА — ТОЧНО ТАКОЙ ЖЕ РАЗМЕР, ЧТО И РЕГИОНЫ -->
+        <div id="region-details" class="region-details hidden">
+          <h2 class="symbolics-title">Символика</h2>
+          <div class="symbolics-content"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Debug -->
+  <div id="debug-panel" class="debug-panel hidden">
+    <div class="debug-form">
+      <input type="text" id="debug-login" placeholder="Логин">
+      <input type="password" id="debug-password" placeholder="Пароль">
+      <button id="debug-submit">Войти</button>
+      <button id="debug-cancel">Отмена</button>
+    </div>
+  </div>
+
+  <!-- [НОВОЕ] Кнопка "К тестам" (скрыта по умолчанию, показывается с основным контентом) -->
+  <a href="tests.html" class="back-button hidden" id="tests-btn">К тестам</a>
+
+  <script src="script.js"></script>
+  <script src="debug.js"></script>
+</body>
+</html>
