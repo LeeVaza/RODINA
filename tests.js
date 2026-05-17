@@ -1,4 +1,4 @@
-// // Диагностика отображения кнопок
+// // Диагностика отображения кнопок 
 // document.addEventListener('DOMContentLoaded', function() {
 //   console.log('Tests page loaded');
 //   const buttons = document.querySelectorAll('.start-test-btn');
